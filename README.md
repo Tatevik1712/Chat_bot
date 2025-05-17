@@ -22,7 +22,7 @@ public class Launcher {
     public static void main(String[] args) {
         Application.launch(ChatBotApp.class, args);
     }
-}
+}```
 
 2. Откройте проект в IntelliJ IDEA.
 Перейдите в File > Project Structure > Artifacts.
