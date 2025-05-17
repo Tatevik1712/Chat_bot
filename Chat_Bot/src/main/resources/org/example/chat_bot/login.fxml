@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- Основной контейнер, размер 440x956, с привязкой к контроллеру
+<Pane> — это базовый контейнер, который позволяет располагать элементы вручную по координатам
+ prefWidth, prefHeight — предпочтительная ширина и высота контейнера.
+layoutY — вертикальное смещение контейнера внутри родителя.
+styleClass — CSS-класс для стилизации.  -->
+<Pane prefHeight="956.0" prefWidth="440.0" styleClass="footer-pane"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.chat_bot.LoginController">
+
+   <!-- Верхняя часть с фоном и содержимым -->
+   <Pane fx:id="headerPane" prefHeight="573.0" prefWidth="440.0" styleClass="header-pane">
+
+      <!-- Вертикальный контейнер: логотип, заголовок, поля ввода
+      <VBox> — вертикальный контейнер: размещает дочерние элементы друг под другом
+      alignment — выравнивание содержимого (например, CENTER — по центру).
+      spacing — отступ между элементами.
+      prefWidth, prefHeight — предпочтительные размеры.-->
+      <VBox alignment="CENTER" layoutY="100" prefWidth="440" spacing="30">
+
+         <!-- Картинка-логотип, сохраняет пропорции
+         <ImageView> — отображает изображение.
+         fitWidth, fitHeight — размеры изображения.
+         preserveRatio — сохраняет пропорции при масштабировании.
+         pickOnBounds — позволяет "ловить" клики даже за пределами видимой области.-->
+         <ImageView fx:id="logoImage" fitHeight="200" fitWidth="200"
+                    pickOnBounds="true" preserveRatio="true" />
+
+         <!-- Название приложения: SMART HEALTH
+         <HBox> — горизонтальный контейнер: размещает дочерние элементы по горизонтали.
+         alignment — выравнивание (например, по центру).
+         spacing — расстояние между элементами.-->
+         <HBox alignment="CENTER" spacing="5">
+            <Text fx:id="infoText" styleClass="title-text" text="SMART " />
+            <Text styleClass="title-text-normal" text="HEALTH" />
+         </HBox>
+
+         <!-- Поля для ввода имени и пароля -->
+      <VBox alignment="CENTER" prefHeight="73.0" prefWidth="388.0" spacing="20">
+         <!-- <TextField> — однострочное поле ввода текста (например, для имени пользователя).
+         promptText — текст-подсказка, когда поле пустое.
+         prefWidth, prefHeight — размеры поля.
+         fx:id — идентификатор, с помощью которого можно обращаться к элементу в контроллере.
+         styleClass — CSS-класс.-->
+      <TextField fx:id="usernameField" prefHeight="26.0" prefWidth="390.0"
+                 promptText="Имя пользователя" styleClass="input-field" />
+
+         <!--<PasswordField> — поле ввода пароля, текст скрывается точками.
+         Свойства: те же, что и у TextField-->
+      <PasswordField fx:id="passwordField" prefHeight="26.0" prefWidth="331.0"
+                     promptText="Пароль" styleClass="input-field" />
+   </VBox>
+</VBox>
+</Pane>
+
+<!-- Нижняя часть с кнопками -->
+   <Pane fx:id="footerPane" layoutY="573.0" prefHeight="383.0" prefWidth="440.0" styleClass="footer-pane">
+
+      <!-- Кнопки внутри вертикального контейнера -->
+      <VBox alignment="CENTER" layoutY="50.0" prefWidth="440.0" spacing="20">
+         <!-- Кнопка "Войти", вызывает метод handleLogin
+         <Button> — кнопка, которую можно нажать.
+         text — текст на кнопке.
+         onAction — обработчик события при нажатии (например, #handleLogin вызывает метод handleLogin() в контроллере).
+         styleClass — CSS-класс для кнопки.-->
+         <Button fx:id="loginButton" onAction="#handleLogin"
+                 styleClass="login-button" text="Войти" />
+
+         <!-- Кнопка для дополнительной информации -->
+         <Button fx:id="infoButton" styleClass="info-button" text="Дополнительная информация" />
+      </VBox>
+   </Pane>
+</Pane>

@@ -1,0 +1,222 @@
+/* Общие стили */
+.root {
+    -fx-font-family: "Inter"; /* Убедитесь, что шрифт Inter доступен в системе */
+}
+
+/* Фиолетовый фон с градиентом (увеличенный) */
+.header-pane {
+    -fx-background-color: linear-gradient(to bottom, #8E4BFD, #BD97FC); /* От фиолетового к светло-фиолетовому */
+    -fx-background-radius: 40; /* Закругленные углы */
+}
+
+/* Фиолетовый фон с градиентом (увеличенный) */
+.back-pane {
+    -fx-background-color: linear-gradient(to bottom, #8E4BFD, #BD97FC); /* От фиолетового к светло-фиолетовому */
+}
+
+.text-area {
+    -fx-background-color: #f0f0f0; /* Цвет фона */
+    -fx-text-fill: #333;           /* Цвет текста */
+    -fx-font-size: 14px;           /* Размер шрифта */
+    -fx-border-color: #dcdcdc;    /* Цвет границы */
+    -fx-border-width: 1px;        /* Толщина границы */
+    -fx-border-radius: 5px;       /* Скругление углов */
+}
+
+
+/* Заголовок SMART  (увеличенный) */
+.title-text {
+    -fx-font-size: 46px; /* Увеличен с 40 до 60 */
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Заголовок "HEALTH" (не жирный) */
+.title-text-normal {
+    -fx-font-size: 46px;
+    -fx-fill: white;
+    -fx-font-weight: normal; /* Убираем жирность */
+}
+
+/* Надпись "Авторизация" */
+.auth-label {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+/* Поля ввода (полупрозрачные белые) */
+.input-field {
+    /* Устанавливает предпочтительную ширину поля ввода в 300 пикселей */
+    -fx-pref-width: 180px;
+    /*-fx-pref-height: 20px*/
+
+    /* Задает полупрозрачный белый фон:
+       rgba(255, 255, 255, 0.3) — белый цвет (RGB: 255, 255, 255) с прозрачностью 0.3 */
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+
+    /* Устанавливает цвет вводимого текста в белый для контраста с фоном */
+    -fx-text-fill: white;
+
+    /* Задает цвет подсказки (placeholder) как слегка прозрачный белый:
+       rgba(255, 255, 255, 0.7) — белый с прозрачностью 0.7 */
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.7);
+
+    /* Устанавливает размер шрифта текста в поле ввода в 16 пикселей */
+    -fx-font-size: 20px;
+
+    /* Задает радиус закругления углов границы в 10 пикселей
+       (влияет на форму, если есть видимая граница) */
+    -fx-border-radius: 17;
+
+    /* Устанавливает радиус закругления углов фона в 10 пикселей
+       для создания мягкого, современного вида */
+    -fx-background-radius: 17;
+
+    /* Определяет внутренний отступ в 8 пикселей со всех сторон
+       (между текстом и краями поля) */
+    -fx-padding: 8;
+}
+
+/* Поле ввода сообщение боту ( белые) */
+.input-field-massege {
+
+    /* Задает белый фон:
+    -fx-background-color: rgba(255, 255, 255);
+
+    /* Устанавливает цвет вводимого текста в белый для контраста с фоном */
+    -fx-text-fill: #675F5F;
+
+    /* Задает цвет подсказки (placeholder) как слегка прозрачный белый:
+       rgba(255, 255, 255, 0.7) — белый с прозрачностью 0.7 */
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.7);
+
+    /* Устанавливает размер шрифта текста в поле ввода в 16 пикселей */
+    -fx-font-size: 16px;
+
+    /* Задает радиус закругления углов границы в 10 пикселей
+       (влияет на форму, если есть видимая граница) */
+    -fx-border-radius: 18;
+
+    /* Устанавливает радиус закругления углов фона в 10 пикселей
+       для создания мягкого, современного вида */
+    -fx-background-radius: 18;
+
+    /* Определяет внутренний отступ в 8 пикселей со всех сторон
+       (между текстом и краями поля) */
+    -fx-padding: 8;
+}
+
+
+/* Стиль для поля ввода, когда оно в фокусе (активно) */
+.input-field:focused {
+    /* Увеличивает непрозрачность фона до 0.5 при фокусе для визуального выделения */
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+}
+/* Серая нижняя половина */
+.footer-pane {
+    -fx-background-color: #D2D9DC; /* Светло-серый */
+}
+
+/* Кнопка "Войти" (фиолетовая) */
+.login-button {
+    -fx-background-color: linear-gradient(to bottom, #8E4BFD, #BD97FC); /* От фиолетового к светло-фиолетовому */
+    -fx-text-fill: white;
+    -fx-pref-width: 150px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-padding: 5;
+    -fx-font-size: 17px;
+
+}
+
+.login-button:hover {
+    -fx-background-color: #4b0778; /* Темнее при наведении */
+}
+
+/* Кнопка "Доп. информация" (белая) */
+.info-button {
+    -fx-background-color: white;
+    -fx-text-fill: #6a0dad; /* Фиолетовый текст */
+    -fx-pref-width: 300px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-padding: 8;
+    -fx-font-size: 15px;
+}
+
+.info-button:hover {
+    -fx-background-color: #f0f0f0; /* Чуть темнее при наведении */
+}
+
+/*Кнопки загрузки и отправки*/
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+    -fx-cursor: hand;
+}
+
+.icon-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+    -fx-background-radius: 10;
+}
+
+/* Стили для области чата */
+.chat-area {
+    -fx-padding: 10;
+    -fx-background-color: linear-gradient(to bottom, #8E4BFD, #BD97FC); /* Светлый фон */
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-hbar-policy: never;  /* Отключение горизонтальной прокрутки */
+    -fx-translate-y: 10px; /* Сдвиг чата вниз, чтобы освободить место для сообщений */
+}
+
+/* Стили для сообщений пользователя (располагаются справа) */
+.user-message {
+    -fx-background-color: #845AC9; /* Цвет фона "облачка" для сообщений пользователя (фиолетовый) */
+    -fx-padding: 10px;             /* Внутренний отступ внутри сообщения */
+    -fx-background-radius: 20px;   /* Закругление углов фона */
+    -fx-margin: 5px;               /* Внешний отступ (не всегда поддерживается в JavaFX) */
+    -fx-text-fill: #ffffff;        /* Цвет текста внутри сообщения */
+    -fx-font-size: 14px;           /* Размер шрифта */
+    -fx-border-radius: 20px;       /* Закругление рамки, если она будет добавлена */
+    -fx-line-spacing: 5px;         /* Межстрочный интервал */
+}
+
+/* Псевдоэлемент для хвостика облака */
+.user-message::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #845AC9;
+    left: -10px;
+    bottom: 5px; /* Отступ от нижней части */
+}
+
+/* Стили для сообщений бота (слева) */
+.bot-message {
+    -fx-background-color: #845AC9; /* Цвет фона облака */
+    -fx-padding: 10px;
+    -fx-background-radius: 20px;
+    -fx-margin: 5px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-radius: 20px;
+    -fx-line-spacing: 5px;
+}
+
+/* Псевдоэлемент для хвостика облака */
+.bot-message::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #845AC9;
+    right: -10px;
+    bottom: 5px; /* Отступ от нижней части */
+}

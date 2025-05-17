@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="440.0" stylesheets="@styleLogin.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chat_bot.ChatController">
+
+   <VBox layoutX="0" layoutY="0" prefHeight="752.0" prefWidth="440" spacing="10" styleClass="back-pane">
+      <!-- Заголовок с профилем -->
+      <HBox prefHeight="58.0" prefWidth="440.0" spacing="10">
+         <ImageView fx:id="profileLogo" fitHeight="50" fitWidth="50" />
+         <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" text="Пользователь" />
+      </HBox>
+
+      <!-- Область чата с прокруткой -->
+      <ScrollPane fx:id="scrollPane" styleClass="back-pane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="695.0" prefWidth="462.0" vbarPolicy="ALWAYS" AnchorPane.topAnchor="70.0">
+         <VBox fx:id="chatArea" maxWidth="Infinity" spacing="10" styleClass="back-pane">
+            <!-- сообщения будут добавляться сюда -->
+         </VBox>
+      </ScrollPane>
+   </VBox>
+
+   <!-- Нижняя панель -->
+   <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="440.0" spacing="10" styleClass="footer-pane" AnchorPane.bottomAnchor="0.0">
+      <!-- Кнопка скрепки -->
+      <Button fx:id="uploadButton" prefWidth="50.0" styleClass="icon-button">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0">
+               <Image preserveRatio="true" url="@icons/paperclip.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+
+      <!-- Поле ввода -->
+      <TextField fx:id="messageField" prefHeight="36.0" prefWidth="354.0" promptText="Введите сообщение" styleClass="input-field-massege" />
+
+      <!-- Кнопка отправки -->
+      <Button fx:id="sendButton" styleClass="icon-button">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0">
+               <Image preserveRatio="true" url="@icons/send.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+   </HBox>
+
+</AnchorPane>
