@@ -23,7 +23,7 @@ public class Launcher {
         Application.launch(ChatBotApp.class, args);
     }
 }```
-
+---
 2. Откройте проект в IntelliJ IDEA.
 Перейдите в File > Project Structure > Artifacts.
 Нажмите +, выберите JAR > From modules with dependencies.
@@ -35,11 +35,13 @@ public class Launcher {
 После сборки, JAR-файл будет находиться по пути:
 out/artifacts/Chat_Bot_jar/Chat_Bot.jar
 
+---
 ## Установка Inno Setup
 Перейдите на сайт: https://jrsoftware.org/isdl.php
 
 Скачайте и установите последнюю версию Inno Setup.
-
+---
 ## Создание установщика .exe
 Создайте простой .iss скрипт (пример ниже).
 Откройте его в Inno Setup Compiler и нажмите "Compile".
+---
